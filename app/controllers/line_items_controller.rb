@@ -41,6 +41,7 @@ class LineItemsController < ApplicationController
   # POST /line_items.xml
   def create
     @cart = current_cart
+    session[:counter] = 0
     product = Product.find(params[:product_id])
     @line_item = @cart.line_items.build(:product => product)
 
