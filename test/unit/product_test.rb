@@ -20,6 +20,14 @@ class ProductTest < ActiveSupport::TestCase
     assert_equal I18n.translate('activerecord.errors.messages.taken'), product.errors[:title].join('; ')
   end  
   
+  test "product is not valid with a title length < 10" do
+    product = Product.new(:title => "test",
+                          :description => "yyy",
+                          :price => 1,
+                          :image_url => "fred.gif")
+    assert !product.save
+  end
+  
   test "product attributes must not be empty" do
     product = Product.new
     assert product.invalid?
