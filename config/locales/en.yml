@@ -14,4 +14,4 @@ en:
         title: "Choose a good title for you post."
         description: "Write something inspiring here."
     actions:
-      create: "Create my {{model}}"
+      create: "Create"
