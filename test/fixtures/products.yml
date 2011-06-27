@@ -7,16 +7,16 @@ ruby:
     language out there. If you need to get working programs
     delivered fast, you should add Ruby to your toolbox.
   price:  49.50
-  image_url:  ruby.png
+  image:  ruby.png
 
 one:
   title: blah-blah title 1 
   description: blah-blah description 1
   price:  49.50
-  image_url:  ruby.png
+  image:  ruby.png
 
 two:
   title: blah-blah title 2 
   description: blah-blah description 2
   price:  49.50
-  image_url:  ruby.png
+  image:  ruby.png

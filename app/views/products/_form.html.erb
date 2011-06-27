@@ -1,9 +1,9 @@
 <%= semantic_form_for @product, :html => { :enctype => "multipart/form-data" } do |form| %>
-  <%= form.semantic_errors :title, :description, :image_url, :price %>
+  <%= form.semantic_errors :title, :description, :image, :price %>
   <%= form.inputs do %>
     <%= form.input :title %>
     <%= form.input :description, :input_html => { :rows => 6 } %>
-    <%= form.input :image_url, :as => :file %>
+    <%= form.input :image, :as => :file %>
     <%= form.input :price %>
   <% end %>
   <%= form.buttons do %>

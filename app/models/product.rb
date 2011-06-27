@@ -1,9 +1,9 @@
 class Product < ActiveRecord::Base
-  attr_accessible :title, :price, :description, :image_url
+  attr_accessible :title, :price, :description, :image
   
   has_many :line_items, :dependent => :destroy
   
-  mount_uploader :image_url, ImageUploader 
+  mount_uploader :image, ImageUploader 
   
   before_destroy :ensure_not_referenced_by_any_line_item
   
@@ -16,11 +16,7 @@ class Product < ActiveRecord::Base
     end
   end
   
-  validates :title, :description, :image_url, :presence => true
+  validates :title, :description, :presence => true
   validates :price, :numericality => {:greater_than_or_equal_to => 0.01}
   validates :title, :length => {:minimum => 10, :message => 'OMG! Title is too short'}, :uniqueness => true
-  validates :image_url, :format => {
-    :with => %r{\.(gif|jpg|png)$}i,
-    :message => 'must be a URL for GIF, JPG or PNG image.'
-  }
 end

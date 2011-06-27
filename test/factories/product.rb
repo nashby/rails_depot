@@ -8,5 +8,5 @@ Factory.define :product do |f|
                   language out there. If you need to get working programs
                   delivered fast, you should add Ruby to your toolbox.'
   f.price 49.50
-  f.image_url 'ruby.png'
+  f.image 'ruby.png'
 end
