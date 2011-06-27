@@ -1,6 +1,9 @@
 class Product < ActiveRecord::Base
-  default_scope :order => 'title'
+  attr_accessible :title, :price, :description, :image_url
+  
   has_many :line_items, :dependent => :destroy
+  
+  mount_uploader :image_url, ImageUploader 
   
   before_destroy :ensure_not_referenced_by_any_line_item
   
