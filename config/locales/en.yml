@@ -2,4 +2,16 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  formtastic:
+    titles:
+      title: "Product title"
+    labels:
+      product:
+        title: "Title"
+        description: "Description"
+    hints:
+      product:
+        title: "Choose a good title for you post."
+        description: "Write something inspiring here."
+    actions:
+      create: "Create my {{model}}"
