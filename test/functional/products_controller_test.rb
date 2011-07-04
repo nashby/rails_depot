@@ -32,30 +32,32 @@ class ProductsControllerTest < ActionController::TestCase
     assert_redirected_to product_path(assigns(:product))
   end
 
-  test "should show product" do
-    @product.save
-    get :show, :id => @product.to_param
-    assert_response :success
-  end
+  context "Product" do
+    setup do
+      @product.save
+    end 
 
-  test "should get edit" do
-    @product.save
-    get :edit, :id => @product.to_param
-    assert_response :success
-  end
-
-  test "should update product" do
-    @product.save
-    put :update, :id => @product.to_param, :product => @update
-    assert_redirected_to product_path(assigns(:product))
-  end
-
-  test "should destroy product" do
-    @product.save
-    assert_difference('Product.count', -1) do
-      delete :destroy, :id => @product.to_param
+    should "should show product" do
+      get :show, :id => @product.to_param
+      assert_response :success
     end
 
-    assert_redirected_to products_path
+    should "should get edit" do
+      get :edit, :id => @product.to_param
+      assert_response :success
+    end
+
+    should "should update product" do
+      put :update, :id => @product.to_param, :product => @update
+      assert_redirected_to product_path(assigns(:product))
+    end
+
+    should "should destroy product" do
+      assert_difference('Product.count', -1) do
+        delete :destroy, :id => @product.to_param
+      end
+
+      assert_redirected_to products_path
+    end
   end
 end

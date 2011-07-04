@@ -7,5 +7,6 @@ gem 'formtastic'
 gem 'carrierwave'
 
 group :test do
+  gem 'shoulda'
   gem 'factory_girl_rails'
 end
