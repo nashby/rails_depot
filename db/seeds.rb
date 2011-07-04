@@ -19,7 +19,7 @@ Product.create(:title => 'Web Design for Developers',
         and work through a web site redesign, taking a new design from concept
         all the way to implementation.
       </p>},
-  :image =>   '/images/wd4d.jpg',    
+  :image => File.new(File.expand_path("../fixtures/images/wd4d.jpg", __FILE__)),    
   :price => 42.95)
 # . . .
 Product.create(:title => 'Programming Ruby 1.9',
@@ -29,7 +29,7 @@ Product.create(:title => 'Programming Ruby 1.9',
         out there. If you need to get working programs delivered fast,
         you should add Ruby to your toolbox.
       </p>},
-  :image => '/images/ruby.jpg',
+  :image => File.new(File.expand_path("../fixtures/images/ruby.jpg", __FILE__)),
   :price => 49.50)
 # . . .
 
@@ -43,5 +43,5 @@ Product.create(:title => 'Rails Test Prescriptions',
         procedures for Rails 2 and Rails 3, and introduces popular add-ons,
         including Cucumber, Shoulda, Machinist, Mocha, and Rcov.
       </p>},
-  :image => '/images/rtp.jpg',
+  :image => File.new(File.expand_path("../fixtures/images/rtp.jpg", __FILE__)),
   :price => 43.75)

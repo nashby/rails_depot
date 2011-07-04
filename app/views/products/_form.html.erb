@@ -1,4 +1,4 @@
-<%= semantic_form_for @product, :html => { :enctype => "multipart/form-data" } do |form| %>
+<%= semantic_form_for @product, :html => { :mulipart => true } do |form| %>
   <%= form.semantic_errors :title, :description, :image, :price %>
   <%= form.inputs do %>
     <%= form.input :title %>
