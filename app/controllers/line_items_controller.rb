@@ -2,9 +2,9 @@ class LineItemsController < ApplicationController
   # GET /line_items
   # GET /line_items.xml
   
-  before_filter :get_line_item, :only => [:show, :edit, :update, :destroy]
+  before_filter :line_item, :only => [:show, :edit, :update, :destroy]
   
-  def get_line_item
+  def line_item
     @line_item = LineItem.find(params[:id])    
   end
   
